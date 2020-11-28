@@ -1,18 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import RefreshIcon from '../assets/refresh.png'
-import RefreshIcon2x from '../assets/refresh@2x.png'
-import RefreshIcon3x from '../assets/refresh@3x.png'
+import SortIconAsset from '../assets/sort.png'
+import SortIconAsset2x from '../assets/sort@2x.png'
+import SortIconAsset3x from '../assets/sort@3x.png'
 import {rem} from 'polished'
 
-export const SiteLogo = () => {
+export const SortIcon = () => {
     return (
         <Wrapper>
             <Logo 
                 width={14}
                 height={18}
-                src={RefreshIcon}
-                srcSet={`${RefreshIcon2x} 2x, ${RefreshIcon3x} 3x`}
+                src={SortIconAsset}
+                srcSet={`${SortIconAsset2x} 2x, ${SortIconAsset3x} 3x`}
                 alt="Sort icon."
             />
             <Text>Launches</Text>
