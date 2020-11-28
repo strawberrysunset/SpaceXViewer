@@ -1,14 +1,19 @@
 import React from 'react';
 import styled, {ThemeProvider} from 'styled-components'
 import {GlobalStyle, theme} from './theme'
+import {QueryCache, ReactQueryCacheProvider} from 'react-query'
 import {rem} from 'polished'
+
+const queryCache = new QueryCache()
 
 export const App = () => {
   return (
     <GlobalStyle>
       <ThemeProvider theme={theme}>
-        <PageWrapper>
-        </PageWrapper>
+        <ReactQueryCacheProvider queryCache={queryCache}>
+          <PageWrapper>
+          </PageWrapper>
+        </ReactQueryCacheProvider>
       </ThemeProvider>
     </GlobalStyle>
   );
