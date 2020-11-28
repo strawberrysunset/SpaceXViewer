@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "SpaceX Launch API",
+  "name": "Spacex Launch API - Take Home Challenge",
   "icons": [
     {
       "src": "favicon.ico",
