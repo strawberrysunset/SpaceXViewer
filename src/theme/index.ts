@@ -16,9 +16,9 @@ export const GlobalStyle = createGlobalStyle`
     ${normalize()}
 
     // Set default values for document.
-    color: ${colors.primary};
+    color: ${colors.neutral[100]};
     font-family: ${fonts.default};
-    font-size: ${typeScale.body};
+    font-size: ${typeScale[100]};
 
     // Load all relevant fonts.
     @font-face {
