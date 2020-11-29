@@ -1,19 +1,19 @@
-// Sort an array of data in ascending or descending order.
+// Sort an array in ascending or descending order.
 import React from 'react'
 
 interface Props {
-    data: unknown[] // Data that will be sorted.
+    array: unknown[] // Array that will be sorted.
     direction: 'ascending' | 'descending', // Sorting direction.
     statePick(value: unknown) : unknown // Function for picking state which will be compared.
 }
 
 interface Return {
-    sortedData: any[],
-    toggleDirection: () => void
+    sortedArray: any[],
+    toggleSortingDirection: () => void
 }
 
-export const sortData = ({data, direction, statePick} : Props) => {
-    return data.sort((item1, item2) => {
+export const sortArray = ({array, direction, statePick} : Props) => {
+    return array.sort((item1, item2) => {
         const stateA = statePick(item1)
         const stateB = statePick(item2)
         if (direction === 'ascending') return (stateA - stateB)
@@ -21,13 +21,16 @@ export const sortData = ({data, direction, statePick} : Props) => {
     })
 }
 
-export const useSortedData = ({ data, direction: initialDirection, statePick } : Props) : Return => {
+export const useSortedArray = ({ array, direction: initialDirection, statePick } : Props) : Return => {
+    
     const [direction, setDirection] = React.useState(initialDirection)
-    const sortedData = sortData({data, direction, statePick});
-    const toggleDirection = React.useCallback(() => {
+    const sortedArray = sortArray({array, direction, statePick});
+    
+    const toggleSortingDirection = React.useCallback(() => {
         setDirection((direction === 'ascending') ? 'descending' : 'ascending')
-    }, [])
-    return {sortedData, toggleDirection}
+    }, [setDirection])
+    
+    return {sortedArray, toggleSortingDirection}
 }
 
 
