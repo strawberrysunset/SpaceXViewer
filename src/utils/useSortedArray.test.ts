@@ -1,19 +1,19 @@
-import {sortData} from './useSortedArray'
+import {sortArray} from './useSortedArray'
 
 const orderedTestData = [{year: 2018}, {year: 2020}, {year: 2021}]
 const unorderedTestData = [{year: 2020}, {year: 2018}, {year: 2021}]
 
 const props = {
-    data: unorderedTestData,
+    array: unorderedTestData,
     direction: 'ascending' as const,
     statePick: (state: {year: number}) => state.year
 }
 
-test('Returns empty array if input array is empty.', () => {
-    expect(sortData({...props, data: []})).toEqual([])
+test('Returns empty array if input data array is empty.', () => {
+    expect(sortArray({...props, array: []})).toEqual([])
 })
 
 test('Sorts data in correct direction.', () => {
-    expect(sortData(props)).toEqual(orderedTestData)
-    expect(sortData({...props, direction: 'descending'})).toEqual(orderedTestData.reverse())
+    expect(sortArray(props)).toEqual(orderedTestData)
+    expect(sortArray({...props, direction: 'descending'})).toEqual(orderedTestData.reverse())
 })
