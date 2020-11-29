@@ -1,12 +1,16 @@
-import {filterData} from './useFilteredArray'
+import {filterArray} from './useFilteredArray'
 
 const testData = [{year: 2018}, {year: 2020}, {year: 2021}]
 
 const props = {
-    data: testData,
-    condition: ({ year }: { year: number }) => year < 2021
+    array: testData,
+    filter: (state: { year: number }) => state.year < 2021
 }
 
 test('Filters array based on condition.', () => {
-    expect(filterData(props)).toEqual([{year: 2018}, {year: 2020}])
+    expect(filterArray(props)).toEqual([{year: 2018}, {year: 2020}])
+})
+
+test('Returns original array if no filter is given.', () => {
+    expect(filterArray({...props, filter: undefined})).toEqual(props.array)
 })
