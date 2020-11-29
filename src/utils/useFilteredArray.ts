@@ -1,13 +1,15 @@
+
 interface Props {
-    data: any[],
-    condition(state: unknown) : boolean
+    array: any[],
+    filter?: (state: any) => boolean 
 }
 
-export const filterData = ({data, condition} : Props) => {
-    return data.filter(condition)
+export const filterArray = ({array, filter} : Props) => {
+    if (!filter) return array
+    return array.filter(filter)
 }
 
-export const useFilteredData = ({data, condition} : Props) => {
-    return filterData({data, condition})
+export const useFilteredArray = ({array, filter} : Props) => {
+    return filterArray({array, filter})
 }
 
