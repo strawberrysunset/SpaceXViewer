@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Button} from './common'
-import RefreshIcon from '../assets/icon/refresh.png'
-import {SiteLogo} from './graphics'
+import {SiteLogo, RefreshIcon} from './graphics'
 import {useLaunchData} from '../api'
+import {rem} from 'polished'
 
 export const Header = () => {
 
@@ -12,15 +12,16 @@ export const Header = () => {
     return (
         <Wrapper>
             <SiteLogo/>
-            <RefreshButton icon={RefreshIcon} onClick={refetch}/>
+            <RefreshButton icon={RefreshIcon} onClick={refetch}>Reload Data</RefreshButton>
         </Wrapper>
     )
 }
 
 const Wrapper = styled.header`
-
+    display: flex;
+    justify-content: space-between;
 `
 
 const RefreshButton = styled(Button)`
-    border-radius: 1rem 0 0 1rem;
+    border-radius: ${rem(32)} 0 0 ${rem(32)};
 `
