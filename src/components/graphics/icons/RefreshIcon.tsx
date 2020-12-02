@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import RefreshIconAsset from '../assets/refresh.png'
-import RefreshIconAsset2x from '../assets/refresh@2x.png'
-import RefreshIconAsset3x from '../assets/refresh@3x.png'
+import RefreshIconAsset from '../../../assets/icon/refresh.png'
+import RefreshIconAsset2x from '../../../assets/icon/refresh@2x.png'
+import RefreshIconAsset3x from '../../../assets/icon/refresh@3x.png'
 import {rem} from 'polished'
 
 export const RefreshIcon = () => {
@@ -13,7 +13,6 @@ export const RefreshIcon = () => {
                 srcSet={`${RefreshIconAsset2x} 2x, ${RefreshIconAsset3x} 3x`}
                 alt="Refresh icon."
             />
-            <Text>Launches</Text>
         </Wrapper>
     )
 }
@@ -24,8 +23,8 @@ const Wrapper = styled.div`
 `
 
 const Logo = styled.img`
-    width: ${rem(178.75)};
-    height: ${rem(22)};
+    width: ${rem(14)};
+    height: ${rem(14)};
 `
 
 const Text = styled.span`
