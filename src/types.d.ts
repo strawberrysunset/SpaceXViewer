@@ -1,4 +1,4 @@
-export interface LaunchData {
+export interface Launch {
     id: string,
     name: number,
     flightNumber: number,

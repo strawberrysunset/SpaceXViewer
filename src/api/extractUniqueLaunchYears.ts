@@ -1,7 +1,7 @@
-import {LaunchData} from '../types'
+import {Launch} from '../types'
 
 interface Props {
-    launches: LaunchData[]
+    launches: Launch[]
 }
 
 // Get deduped array of launch years.

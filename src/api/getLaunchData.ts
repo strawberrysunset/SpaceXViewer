@@ -1,10 +1,10 @@
 import {jsonFetch} from '../utils'
-import {LaunchData} from '../types'
+import {Launch} from '../types'
 import {formatLaunches} from './formatLaunches'
 import {extractUniqueLaunchYears} from './extractUniqueLaunchYears'
 
 interface ReturnType {
-    launches: LaunchData[],
+    launches: Launch[],
     launchYears: number[]
 }
 

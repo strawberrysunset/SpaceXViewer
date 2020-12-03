@@ -6,7 +6,7 @@ import { useLaunchData } from '../api'
 import { useSortedArray, useFilteredArray} from '../utils'
 import { LaunchCardList } from './LaunchCardList'
 import {rem} from 'polished'
-import { LaunchData } from '../types'
+import { Launch } from '../types'
 
 export const LaunchTable = () => {
 
@@ -16,19 +16,19 @@ export const LaunchTable = () => {
     const disabled: boolean = isLoading || isError || isFetching
 
     // Filter array using filter function. Initially, no filter is set.
-    const {filteredArray, setFilter, clearFilter} = useFilteredArray<LaunchData>({array: data?.launches})
+    const {filteredArray, setFilter, clearFilter} = useFilteredArray<Launch>({array: data?.launches})
 
     // Sort array using direction and statePick.
-    const {sortedArray: launches, toggleSortingDirection} = useSortedArray<LaunchData>({
+    const {sortedArray: launches, toggleSortingDirection} = useSortedArray<Launch>({
         array : filteredArray, 
         direction: 'ascending',
-        statePick: (launch: LaunchData) => launch.date.getTime()
+        statePick: (launch: Launch) => launch.date.getTime()
     })
 
     // Year filter handler.
     const setYearFilter = React.useCallback((event : Event) => {
         const year = (event?.target as HTMLSelectElement).value;
-        const filter = (launch: LaunchData) => String(launch.date.getFullYear()) === year;
+        const filter = (launch: Launch) => String(launch.date.getFullYear()) === year;
         year === 'ALL' ? clearFilter() : setFilter(filter)
     }, [setFilter])
 
