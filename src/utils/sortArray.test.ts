@@ -1,4 +1,4 @@
-import {sortArray} from './useSortedArray'
+import {sortArray} from './sortArray'
 
 const orderedTestData = [{year: 2018}, {year: 2020}, {year: 2021}]
 const unorderedTestData = [{year: 2020}, {year: 2018}, {year: 2021}]
