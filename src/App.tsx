@@ -16,10 +16,10 @@ export const App = () => {
         <ReactQueryCacheProvider queryCache={queryCache}>
            <PageWrapper>
             <Header />
-            <MainWrapper>
-              <HeroImage/>
+            <Main>
+              <StyledHeroImage/>
               <LaunchTable/>
-            </MainWrapper>
+            </Main>
           </PageWrapper> 
         </ReactQueryCacheProvider>
       </ThemeProvider>
@@ -28,15 +28,27 @@ export const App = () => {
 }
 
 const PageWrapper = styled.div`
-  max-width: ${rem(1440)};
   padding-left: ${rem(40.92)};
   padding-top: ${rem(32.7)};
   margin: 0 auto;
 `
 
-const MainWrapper = styled.main`
+const Main = styled.main`
+  max-width: ${rem(1440)};
+  min-height: ${rem(800)};
   margin: ${rem(52)} auto;
-  padding: 0 ${rem(80)};
   display: flex;
+  justify-content: flex-end;
   align-items: flex-start;
+  position: relative;
+`
+
+const StyledHeroImage = styled(HeroImage)`
+  position: absolute;
+  left: 0;
+  top: ${rem(81.69)};
+  z-index: -1;
+  @media(max-width: ${rem(1200)}) {
+    opacity: 0.5;
+  }
 `
