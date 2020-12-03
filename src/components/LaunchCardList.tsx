@@ -1,8 +1,9 @@
 import { rem } from 'polished'
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 import moment from 'moment'
 import { LaunchCard } from './LaunchCard'
+import { Message } from './Message'
 
 interface Props {
     launches: any,
@@ -13,7 +14,7 @@ interface Props {
 
 export const LaunchCardList = ({launches, isFetching, isError, error} : Props) => {
 
-    if (isError) return <Message error={true}>{error?.message}</Message>
+    if (isError) return <Message isError={true}>{error?.message}</Message>
     if (isFetching) return <Message>Fetching Data...</Message>
 
     return (
@@ -30,16 +31,6 @@ export const LaunchCardList = ({launches, isFetching, isError, error} : Props) =
         </ListWrapper>
     )
 }
-
-const Message = styled.p<{ error?: boolean }>`
-    width: 100%;
-    text-align: center;
-    font-size: ${props => props.theme.typeScale[100]};
-    ${props => props.error && css`
-        color: ${props.theme.colors.primary[100]};
-    `}
-    margin-top: ${rem(48)};
-`
 
 const ListWrapper = styled.ol`
     list-style: none;
