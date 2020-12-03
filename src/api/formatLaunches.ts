@@ -1,4 +1,4 @@
-import {LaunchData} from './types'
+import {LaunchData} from '../types'
 
 interface Props {
     launches : any, 
