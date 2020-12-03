@@ -27,6 +27,7 @@ git clone https://www.github.com/strawberrysunset/SpaceXViewer.git
 ```
 ### Install dependencies
 ```bash
+cd SpaceXViewer
 npm i
 ```
 ### Create and serve production build
