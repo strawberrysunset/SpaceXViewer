@@ -5,19 +5,17 @@ import HeroImageAsset from '../assets/img/launch-home.png'
 import HeroImageAsset2x from '../assets/img/launch-home@2x.png'
 import HeroImageAsset3x from '../assets/img/launch-home@3x.png'
 
-export const HeroImage = () => {
+export const HeroImage = ({...rest}) => {
     return (
         <Wrapper
             src={HeroImageAsset}
             srcSet={`${HeroImageAsset2x} 2x, ${HeroImageAsset3x} 3x`}
             alt="Image of SpaceX rocket taking off."
+            {...rest}
         />
     )
 }
 
 const Wrapper = styled.img`
-    max-width: ${rem(533.54)};
-    min-width: 20%;
-    /* height: auto;  */
-    /* height: ${rem(694)}; */
+    width: ${rem(533.54)};
 `
