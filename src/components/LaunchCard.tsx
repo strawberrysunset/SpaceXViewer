@@ -30,32 +30,37 @@ const Wrapper = styled.li`
     padding: ${rem(12.5)} ${rem(16)};
     padding-left: ${rem(32)};
     white-space: nowrap;
+    background: ${props => props.theme.colors.neutral[300]};
+    width: ${rem(727)};
+    :hover {
+        box-shadow: 0 ${rem(2)} ${rem(5)} ${props => props.theme.colors.neutral[100]};
+        transition: 0.3s;
+    }
 `
 
-const Number = styled.div`
+const Number = styled.p`
     ::before {
         content: '#';
     }
     font-weight: 500;
     font-size: ${props => props.theme.typeScale[500]};
-    min-width: ${rem(84)};
+    width: ${rem(40)};
 `
 
-const Name = styled.div`
+const Name = styled.p`
     font-size: ${props => props.theme.typeScale[400]};
     font-weight: 500;
-    margin-left: ${rem(68)};
+    margin: 0 ${rem(68)};
+    white-space: pre-wrap;
 `
 
-const Rocket = styled.div`
+const Rocket = styled.p`
     font-weight: 700;
     font-size: ${props => props.theme.typeScale[300]};
     margin-top: ${rem(7.16)};
 `
 
-const Date = styled.p`
-
-`
+const Date = styled.p``
 
 const MetaInfo = styled.div`
     display: flex;
