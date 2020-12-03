@@ -13,9 +13,12 @@ export const getLaunchData = async ({fetch = jsonFetch} : { fetch?(url: string):
     // We don't assume that the API will return the data we expect.
     let launches: any = await fetch('https://api.spacexdata.com/v4/launches') 
     let rockets: any = await fetch('https://api.spacexdata.com/v4/rockets') 
+
+    const formattedLaunches = formatLaunches({launches, rockets})
+    
     return {
-        launches: formatLaunches({launches, rockets}),
-        launchYears: extractUniqueLaunchYears({launches})
+        launches:formattedLaunches,
+        launchYears: extractUniqueLaunchYears({launches: formattedLaunches})
     }
 }
 
