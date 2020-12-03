@@ -1,4 +1,4 @@
-import {filterArray} from './useFilteredArray'
+import {filterArray} from './filterArray'
 
 const testData = [{year: 2018}, {year: 2020}, {year: 2021}]
 
