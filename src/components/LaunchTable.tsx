@@ -6,7 +6,7 @@ import { useLaunchData } from '../api'
 import { useSortedArray, useFilteredArray} from '../utils'
 import { LaunchCardList } from './LaunchCardList'
 import {rem} from 'polished'
-import { LaunchData } from '../api/types'
+import { LaunchData } from '../types'
 
 export const LaunchTable = () => {
 

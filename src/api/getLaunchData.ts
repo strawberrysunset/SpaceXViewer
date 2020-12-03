@@ -1,5 +1,5 @@
 import {jsonFetch} from '../utils'
-import {LaunchData} from './types'
+import {LaunchData} from '../types'
 import {formatLaunches} from './formatLaunches'
 import {extractUniqueLaunchYears} from './extractUniqueLaunchYears'
 
