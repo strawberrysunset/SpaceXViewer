@@ -16,6 +16,8 @@ export const HeroImage = () => {
 }
 
 const Wrapper = styled.img`
-    width: ${rem(533.54)};
-    height: ${rem(694)};
+    max-width: ${rem(533.54)};
+    min-width: 20%;
+    /* height: auto;  */
+    /* height: ${rem(694)}; */
 `
