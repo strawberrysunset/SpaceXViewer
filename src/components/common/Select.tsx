@@ -1,21 +1,17 @@
 import React from 'react'
-import styled from 'styled-components'
 import {Button} from './Button'
-import {SelectIcon} from '../graphics'
+import {SelectIcon} from '../graphics/icons'
 
+ 
 interface Props {
-    children: HTMLOptionElement[],
+    children: any,
     options?: string,
 }
 
 export const Select = ({ children, ...rest } : Props) => {
     return (
-        <Wrapper as="select" icon={SelectIcon} {...rest}>
+        <Button as="select" icon={SelectIcon} {...rest}>
            {children}
-        </Wrapper>
+        </Button>
     )
 }
-
-const Wrapper = styled(Button)`
-    
-`
