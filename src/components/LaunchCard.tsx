@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import {rem} from 'polished'
 
 interface Props {
     number: number,
     name: string,
     rocket: string,
-    date: string
+    date: string | undefined
 }
 
 export const LaunchCard = ({ number, name, date, rocket, ...rest } : Props) => {
@@ -13,40 +14,53 @@ export const LaunchCard = ({ number, name, date, rocket, ...rest } : Props) => {
         <Wrapper {...rest}>
             <Number>{number}</Number>
             <Name>{name}</Name>
-            <Info>
+            <MetaInfo>
                 <Date>{date}</Date>
                 <Rocket>{rocket}</Rocket>
-            </Info>
+            </MetaInfo>
         </Wrapper>
     )
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.li`
     display: flex;
-    box-shadow: 2rem 2rem 2rem ${props => props.theme.colors.neutral[100]};
+    align-items: center;
+    box-shadow: 0 ${rem(2)} ${rem(5)} ${props => props.theme.colors.neutral[200]};
+    border-radius: ${rem(10)};
+    padding: ${rem(12.5)} ${rem(16)};
+    padding-left: ${rem(32)};
 `
 
-const Number = styled.span`
+const Number = styled.div`
     ::before {
-        content: '#'
+        content: '#';
+        
     }
+    font-weight: 500;
+    font-size: ${props => props.theme.typeScale[500]};
+    min-width: ${rem(84)};
 `
 
 const Name = styled.div`
-
+    font-size: ${props => props.theme.typeScale[400]};
+    font-weight: 500;
+    margin-left: ${rem(68)};
 `
 
 const Rocket = styled.div`
-    
+    font-weight: 700;
+    font-size: ${props => props.theme.typeScale[300]};
+    margin-top: ${rem(7.16)};
 `
 
 const Date = styled.p`
 
 `
 
-const Info = styled.div`
+const MetaInfo = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    margin-left: auto;
 `
