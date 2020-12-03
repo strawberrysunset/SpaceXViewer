@@ -29,12 +29,12 @@ const Wrapper = styled.li`
     border-radius: ${rem(10)};
     padding: ${rem(12.5)} ${rem(16)};
     padding-left: ${rem(32)};
+    white-space: nowrap;
 `
 
 const Number = styled.div`
     ::before {
         content: '#';
-        
     }
     font-weight: 500;
     font-size: ${props => props.theme.typeScale[500]};
