@@ -28,6 +28,7 @@ export const GlobalStyle = createGlobalStyle`
         color: ${colors.neutral[100]};
         font-family: ${fonts.default};
         font-size: ${typeScale[100]};
+        background: ${colors.neutral[300]};
     }
     
 `
