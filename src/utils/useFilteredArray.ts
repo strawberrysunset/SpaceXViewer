@@ -1,25 +1,13 @@
 import React from 'react'
+import {filterArray, Props, Filter} from './filterArray'
 
-type Filter = (state: any) => boolean 
-
-interface Props {
-    array: any[],
-    filter?: Filter
+interface ReturnType<T> {
+    filteredArray: T[],
+    setFilter:  React.Dispatch<React.SetStateAction<Filter<T> | undefined>>
 }
 
-interface ReturnType {
-    filteredArray: unknown[],
-    setFilter:  React.Dispatch<React.SetStateAction<Filter | undefined>>
-}
-
-export const filterArray = ({array, filter} : Props) => {
-    if (!filter) return array
-    return array.filter(filter)
-}
-
-export const useFilteredArray = ({array, filter: initialFilter} : Props) : ReturnType => {
-    const [filter, setFilter] = React.useState<Filter | undefined>(initialFilter)
+export function useFilteredArray<T> ({array = [], filter: initialFilter} : Props<T>) : ReturnType<T> {
+    const [filter, setFilter] = React.useState<Filter<T> | undefined>(initialFilter)
     const filteredArray = filterArray({array, filter})
     return {filteredArray, setFilter}
 }
-
