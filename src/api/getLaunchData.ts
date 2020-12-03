@@ -1,27 +1,26 @@
-interface Props {
-    fetch?(url: string): Promise<any>
-}
+import {jsonFetch} from '../utils'
+import {LaunchData} from './types'
+import {formatLaunches} from './formatLaunches'
+import {extractUniqueLaunchYears} from './extractUniqueLaunchYears'
 
-// Return array of launches and deduped array of all launch years.
-export interface ReturnType {
-    allLaunches : any[],
-    allLaunchYears : number[]
+interface ReturnType {
+    launches: LaunchData[],
+    launchYears: number[]
 }
 
 // Allow fetch to be passed as a dependency for testing purposes.
-export const getLaunchData = async ({fetch = window.fetch} : Props) : Promise<ReturnType> => {
-
-    const response = await fetch('https://api.spacexdata.com/v4/launches')
-    const allLaunches = await response.json()    
-
-    // Get deduped array of launch years.
-    const allLaunchYears = allLaunches.reduce((years: number[], launch: any) : number[]  => {
-        const year = new Date(launch.date_unix * 1000).getFullYear()
-        return (years.indexOf(year) === -1) ? [...years, year] : years 
-    }, [])
-
-    return { allLaunches, allLaunchYears }
+export const getLaunchData = async ({fetch = jsonFetch} : { fetch?(url: string): Promise<ReturnType> }) : Promise<ReturnType> => {
+    // We don't assume that the API will return the data we expect.
+    let launches: any = await fetch('https://api.spacexdata.com/v4/launches') 
+    let rockets: any = await fetch('https://api.spacexdata.com/v4/rockets') 
+    return {
+        launches: formatLaunches({launches, rockets}),
+        launchYears: extractUniqueLaunchYears({launches})
+    }
 }
+
+
+
 
 
 
