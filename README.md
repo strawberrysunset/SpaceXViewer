@@ -2,7 +2,7 @@
 
 The task was to create a React application that will consume data from the SpaceX public API. The application must retrieve historic and future SpaceX launches and present them in a list view.
 
-[**Live Link**](https://strawberrysunset.github/build)
+[**Live Demo Link**](https://strawberrysunset.github.io/SpaceXViewer/index.html)
 
 This application was written in TypeScript, unit tested with Jest and was checked against the a11y accessibility checklist. 
 
