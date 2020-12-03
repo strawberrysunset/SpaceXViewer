@@ -23,16 +23,16 @@ Since we can't be 100% sure that the data returned from the SpaceX API will be w
 ## Installation Instructions
 ### Clone the repository
 ```bash
-    git clone https://www.github.com/strawberrysunset/SpaceXViewer.git
+git clone https://www.github.com/strawberrysunset/SpaceXViewer.git
 ```
 ### Install dependencies
 ```bash
-    npm i
+npm i
 ```
 ### Create and serve production build
 ```bash
-    npm run build
-    npx serve -s build
+npm run build
+npx serve -s build
 ```
 
 
