@@ -1,8 +1,9 @@
-import {darken} from 'polished'
+import {darken, transparentize} from 'polished'
 
 // Original colors defined for tech test.
 const primary = "#215184"
 const dark = "#545454"
+const gray = transparentize(0.75, '#000000');
 const light = '#ffffff'
 
 // Generate additional darkened shades for hover/focus states etc.
@@ -14,8 +15,7 @@ export const colors = {
     },
     "neutral": {
         "100": dark,
-        "200": darken(0.1, dark),
-        "300": darken(0.2, dark),
-        "400": light
+        "200": gray,
+        "300": light
     }
 }
