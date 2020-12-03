@@ -1,5 +1,5 @@
 import { CSSProp } from 'styled-components';
-import theme from './index';
+import theme from './theme/index';
 
 // Get type from user defined theme and set it as the default styled-components theme interface.
 declare module 'styled-components' {
