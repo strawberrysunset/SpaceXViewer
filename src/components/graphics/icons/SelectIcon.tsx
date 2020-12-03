@@ -16,7 +16,6 @@ export const SelectIcon = () => {
 }
 
 const Wrapper = styled.img`
-    width: ${rem(14)};
-    height: ${rem(14)};
+    margin: 0 ${rem(4)};
 `
 
