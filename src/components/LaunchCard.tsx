@@ -31,8 +31,7 @@ const Wrapper = styled.li`
     padding-left: ${rem(32)};
     white-space: nowrap;
     background: ${props => props.theme.colors.neutral[300]};
-    width: ${rem(727)};
-    min-width: ${rem(320)};
+    max-width: ${rem(727)};
     :hover {
         box-shadow: 0 ${rem(2)} ${rem(5)} ${props => props.theme.colors.neutral[100]};
         transition: 0.3s;
