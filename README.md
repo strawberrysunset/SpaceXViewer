@@ -4,7 +4,7 @@ The task was to create a React application that will consume data from the Space
 
 [**Live Demo Link**](https://strawberrysunset.github.io/SpaceXViewer/index.html)
 
-This application was written in TypeScript, unit tested with Jest and was checked against the a11y accessibility checklist and the [WAVE web accessibility evaluation tool](https://wave.webaim.org/).
+This application was written in TypeScript, unit tested with Jest and I have tried to adhere to A11y best practices and checked the site with the[WAVE web accessibility evaluation tool](https://wave.webaim.org/).
 
 ## 3rd Party Packages Used: 
 - **React Query** - Server state management.
@@ -14,6 +14,7 @@ This application was written in TypeScript, unit tested with Jest and was checke
 - **Prettier** - Code formatting/consistency.
 
 ### Additional Notes
+ - I have tried to adhere to a11y best practices although scaling down the desktop design to mobile without overflow proved rather tricky. Time permitted, I would improve the mobile experience.
  - I wasn't sure if the number on each launch card referred to the flight number or its position in the list. I opted to use the flight number which is why some launch numbers appear out of order when they are sorted by date.
  - The Adobe Sketch Cloud inspector gave decimal pixel values which is why my CSS has decimal pixel values. 
 
