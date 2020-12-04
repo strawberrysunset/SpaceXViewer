@@ -24,4 +24,5 @@ const Wrapper = styled.header`
 
 const RefreshButton = styled(Button)`
     border-radius: ${rem(32)} 0 0 ${rem(32)};
+    margin-left: ${rem(24)};
 `
