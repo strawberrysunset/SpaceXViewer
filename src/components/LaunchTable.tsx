@@ -68,5 +68,7 @@ const YearSelect = styled(Select)`
 const Wrapper = styled.section`
     margin-left: ${rem(59.46)};
     margin-right: ${rem(80)};
-    
+    @media(max-width: ${rem(800)}){
+        margin-right: ${rem(20)};
+    }
 `
