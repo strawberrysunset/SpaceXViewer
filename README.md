@@ -14,7 +14,7 @@ This application was written in TypeScript, unit tested with Jest and I have tri
 - **Prettier** - Code formatting/consistency.
 
 ### Additional Notes
- - I have tried to adhere to a11y best practices although scaling down the desktop design to mobile without overflow proved rather tricky. Time permitted, I would improve the mobile experience.
+ - I have tried to adhere to a11y best practices although scaling down the desktop design to mobile without overflow proved rather tricky. Time permitting, I would improve the mobile experience.
  - I wasn't sure if the number on each launch card referred to the flight number or its position in the list. I opted to use the flight number which is why some launch numbers appear out of order when they are sorted by date.
  - The Adobe Sketch Cloud inspector gave decimal pixel values which is why my CSS has decimal pixel values. 
 
