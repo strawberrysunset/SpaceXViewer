@@ -10,12 +10,14 @@ export const SelectIcon = () => {
         <Wrapper
             src={SelectIconAsset} // 14px
             srcSet={`${SelectIconAsset2x} 2x, ${SelectIconAsset3x} 3x`}
-            alt="Select icon."
+            alt=""
         />
     )
 }
 
 const Wrapper = styled.img`
     margin: 0 ${rem(4)};
+    width: ${rem(10)};
+    height: ${rem(5)};
 `
 

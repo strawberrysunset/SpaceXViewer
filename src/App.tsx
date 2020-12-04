@@ -34,7 +34,7 @@ const PageWrapper = styled.div`
 `
 
 const Main = styled.main`
-  max-width: ${rem(1440)};
+  max-width: ${rem(1400)};
   min-height: ${rem(800)};
   margin: ${rem(52)} auto;
   display: flex;

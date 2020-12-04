@@ -14,8 +14,8 @@ interface Props {
 
 export const LaunchCardList = ({launches, isFetching, isError, error} : Props) => {
 
-    if (isError) return <Message isError={true}>{error?.message}</Message>
-    if (isFetching) return <Message>Fetching Data...</Message>
+    if (isError) return <Message role="alert" isError={true}>{error?.message}</Message>
+    if (isFetching) return <Message role="alert">Fetching Data...</Message>
 
     return (
         <ListWrapper>

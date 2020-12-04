@@ -12,7 +12,7 @@ export const Header = () => {
     return (
         <Wrapper>
             <SiteLogo/>
-            <RefreshButton icon={RefreshIcon} onClick={refetch}>Reload Data</RefreshButton>
+            <RefreshButton aria-label="Reload launch data." icon={RefreshIcon} onClick={refetch}>Reload Data</RefreshButton>
         </Wrapper>
     )
 }

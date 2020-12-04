@@ -10,7 +10,7 @@ export const HeroImage = ({...rest}) => {
         <Wrapper
             src={HeroImageAsset}
             srcSet={`${HeroImageAsset2x} 2x, ${HeroImageAsset3x} 3x`}
-            alt="Image of SpaceX rocket taking off."
+            alt="SpaceX rocket taking off."
             {...rest}
         />
     )

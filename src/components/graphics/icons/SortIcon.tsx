@@ -10,7 +10,7 @@ export const SortIcon = () => {
         <Wrapper
             src={SortIconAsset}
             srcSet={`${SortIconAsset2x} 2x, ${SortIconAsset3x} 3x`}
-            alt="Sort icon."
+            alt=""
         />
     )
 }

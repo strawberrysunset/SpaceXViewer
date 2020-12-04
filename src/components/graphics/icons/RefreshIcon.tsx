@@ -11,7 +11,7 @@ export const RefreshIcon = () => {
             <Logo 
                 src={RefreshIconAsset}
                 srcSet={`${RefreshIconAsset2x} 2x, ${RefreshIconAsset3x} 3x`}
-                alt="Refresh icon."
+                alt=""
             />
         </Wrapper>
     )

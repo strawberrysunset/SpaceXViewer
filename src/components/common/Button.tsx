@@ -11,7 +11,7 @@ export const Button = ({ children, icon: Icon, ...rest } : Props) => {
     return (
         <Wrapper>
             {Icon && (
-                <IconWrapper>
+                <IconWrapper aria-hidden="true">
                     <Icon/>
                 </IconWrapper>
             )}
@@ -46,7 +46,7 @@ const ButtonWrapper = styled.button`
     padding-right: ${em(36)};
     white-space: nowrap;
     font-weight: 700;
-    :hover {
+    :hover, :focus {
         cursor: pointer;
         background: ${props => props.theme.colors.primary[200]};
     }

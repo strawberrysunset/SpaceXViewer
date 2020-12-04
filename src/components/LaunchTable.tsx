@@ -33,13 +33,13 @@ export const LaunchTable = () => {
     }, [setFilter])
 
     return (
-        <Wrapper>
+        <Wrapper aria-label="Launch List">
             <Options>
-                <YearSelect name="years" onChange={setYearFilter} disabled={disabled} >
+                <YearSelect name="years" aria-label="Filter launches by year." onChange={setYearFilter} disabled={disabled} >
                     <option value="ALL">Filter by Year</option>
                     {data?.launchYears.map((year: number) => <option key={year} value={year}>{year}</option>)}
                 </YearSelect>
-                <SortButton onClick={toggleSortingDirection} icon={SortIcon} disabled={disabled}>Sort Ascending/Descending</SortButton>
+                <SortButton aria-label="Sort launches in ascending or descending order." onClick={toggleSortingDirection} icon={SortIcon} disabled={disabled}>Sort Ascending/Descending</SortButton>
             </Options>
             <LaunchCardList 
                 launches={launches}
@@ -65,7 +65,8 @@ const YearSelect = styled(Select)`
 
 `
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
     margin-left: ${rem(59.46)};
     margin-right: ${rem(80)};
+    
 `
