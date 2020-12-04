@@ -1,15 +1,14 @@
-import {createGlobalStyle} from 'styled-components'
-import {normalize} from 'polished'
-import {colors} from './colors'
-import {fonts} from './fonts'
-import {typeScale} from './typeScale'
+import { createGlobalStyle } from 'styled-components'
+import { normalize } from 'polished'
+import { colors } from './colors'
+import { fonts } from './fonts'
+import { typeScale } from './typeScale'
 import '../assets/font/fonts.css' // Import all fonts.
 
-
 export const theme = {
-    typeScale,
-    colors,
-    fonts
+  typeScale,
+  colors,
+  fonts,
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -77,4 +76,3 @@ export const GlobalStyle = createGlobalStyle`
    
     
 `
-

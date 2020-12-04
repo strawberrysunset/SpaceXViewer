@@ -1,4 +1,4 @@
 export const jsonFetch = async (url: string) => {
-    const response = await fetch(url)
-    return await response.json()
+  const response = await fetch(url)
+  return await response.json()
 }

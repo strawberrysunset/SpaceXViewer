@@ -1,9 +1,9 @@
-import React from 'react';
-import styled, {ThemeProvider} from 'styled-components'
-import {GlobalStyle, theme} from './theme'
-import {QueryCache, ReactQueryCacheProvider} from 'react-query'
-import {rem} from 'polished'
-import {Header, HeroImage, LaunchTable} from './components';
+import React from 'react'
+import styled, { ThemeProvider } from 'styled-components'
+import { GlobalStyle, theme } from './theme'
+import { QueryCache, ReactQueryCacheProvider } from 'react-query'
+import { rem } from 'polished'
+import { Header, HeroImage, LaunchTable } from './components'
 
 // React query requires global provider for caching server state.
 const queryCache = new QueryCache()
@@ -11,20 +11,20 @@ const queryCache = new QueryCache()
 export const App = () => {
   return (
     <React.Fragment>
-      <GlobalStyle/>
+      <GlobalStyle />
       <ThemeProvider theme={theme}>
         <ReactQueryCacheProvider queryCache={queryCache}>
-           <PageWrapper>
+          <PageWrapper>
             <Header />
             <Main>
-              <StyledHeroImage/>
-              <LaunchTable/>
+              <StyledHeroImage />
+              <LaunchTable />
             </Main>
-          </PageWrapper> 
+          </PageWrapper>
         </ReactQueryCacheProvider>
       </ThemeProvider>
     </React.Fragment>
-  );
+  )
 }
 
 const PageWrapper = styled.div`
@@ -48,7 +48,7 @@ const StyledHeroImage = styled(HeroImage)`
   left: 0;
   top: ${rem(81.69)};
   z-index: -1;
-  @media(max-width: ${rem(1200)}) {
+  @media (max-width: ${rem(1200)}) {
     opacity: 0.5;
   }
 `
