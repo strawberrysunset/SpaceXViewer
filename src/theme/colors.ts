@@ -10,8 +10,8 @@ const light = '#ffffff'
 export const colors = {
   primary: {
     '100': primary,
-    '200': darken(0.1, primary),
-    '300': darken(0.2, primary),
+    '200': darken(0.2, primary),
+    '300': darken(0.4, primary),
   },
   neutral: {
     '100': dark,
