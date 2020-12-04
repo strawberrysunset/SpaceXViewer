@@ -6,8 +6,8 @@ import {rem} from 'polished'
 export const SiteLogo = () => {
     return (
         <Wrapper aria-label="SpaceX Launches logo.">
-            <Logo aria-hidden="true" src={SpaceXLogo} alt="SpaceX Launches logo."/>
-            <Text aria-hidden="true">Launches</Text>
+            <Logo src={SpaceXLogo} alt="SpaceX Launches logo."/>
+            <Text>Launches</Text>
         </Wrapper>
     )
 }
