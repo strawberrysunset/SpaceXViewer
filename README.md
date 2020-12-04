@@ -4,7 +4,7 @@ The task was to create a React application that will consume data from the Space
 
 [**Live Demo Link**](https://strawberrysunset.github.io/SpaceXViewer/index.html)
 
-This application was written in TypeScript, unit tested with Jest and was checked against the a11y accessibility checklist and the [webaim accessibility tool](wave.webaim.org).
+This application was written in TypeScript, unit tested with Jest and was checked against the a11y accessibility checklist and the [webaim accessibility tool](https://wave.webaim.org/).
 
 ## 3rd Party Packages Used: 
 - **React Query** - Server state management.
