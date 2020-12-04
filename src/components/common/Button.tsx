@@ -38,6 +38,7 @@ const ButtonWrapper = styled.button`
   border: none;
   text-decoration: none;
   appearance: none;
+  border-radius: 0;
   color: ${(props) => props.theme.colors.neutral[300]};
   background: ${(props) => props.theme.colors.primary[100]};
   padding: ${em(10)} ${em(16)};
