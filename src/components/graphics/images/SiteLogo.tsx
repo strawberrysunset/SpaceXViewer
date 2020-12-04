@@ -26,6 +26,6 @@ const Logo = styled.img`
 const Text = styled.div`
   font-size: ${(props) => props.theme.typeScale[200]};
   text-transform: uppercase;
-  margin-top: ${rem(6)};
+  margin-top: ${rem(5)};
   margin-left: ${rem(-12)};
 `
